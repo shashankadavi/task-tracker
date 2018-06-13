@@ -91,8 +91,8 @@ $(document).ready(function () {
       $('#datatable').empty();
       for (var i = 0; i < input.length; i++) {
           tr = $('<tr/>');
-          tr.append("<td><b>&nbsp" + input[i].name+"</b></td>");
-          tr.append("<td>" + input[i].date + "</td>");
+          tr.append("<td><b>&nbsp" + input[i].name+"</b>&nbsp"+input[i].date +"</td>");
+          // tr.append("<td>" + input[i].date + "</td>");
           tr.append("<td><b>" + input[i].assigned + "</b></td>");
           $('#datatable').append(tr);
       }
