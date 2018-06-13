@@ -1,14 +1,6 @@
 var appendTask = function(){
-  //console.log("here");
 
-      // existingData.splice(0, 0,
-      //   { name: document.getElementById('taskname').value, date : document.getElementById('taskdate').value , assigned: document.getElementById('taskassigned').value});
-      //existingData.unshift({ name: document.getElementById('taskname').value, date : document.getElementById('taskdate').value , assigned: document.getElementById('taskassigned').value});
-
-        //console.log(JSON.stringify(existingData));
         var jsonArray = [];
-        // var retrievedData = localStorage.getItem("jsonData");
-        // console.log(retrievedData);
 
         jsonArray=existingData;
 
@@ -27,30 +19,14 @@ var appendTask = function(){
         }
 
         if(taskName.length == 0 || taskAssigned.length == 0){
-          alert("Expected Input:TaskName and TaskAssigned");
+          alert("Expected Inputs: TaskName & Assigned To");
           validForm = false;
         }
-        //alert()
-        //var newName = document.getElementById('taskname').value;
-        //var newDate =
+
         if(validDate && validForm){
-            jsonArray.unshift({ name: document.getElementById('taskname').value, date : document.getElementById('taskdate').value , assigned: document.getElementById('taskassigned').value});
+            jsonArray.unshift({ name: taskName, date : taskDate , assigned: taskAssigned});
         }
 
-        // var newRow = {
-        //     name: document.getElementById('taskname').value,
-        //     date : document.getElementById('taskdate').value ,
-        //     assigned: document.getElementById('taskassigned').value
-        //   }
-        // jsonArray.push(newRow);
-        // alert(JSON.stringify(jsonArray));
-        //localStorage.setItem("jsonData", JSON.stringify(jsonArray));
-        //alert(localStorage.getItem("jsonData"));
-        //window.location.href="/index.html";
-
-        //existingData = JSON.parse(jsonArray);
-
         drawTable(jsonArray);
-
 
 }
