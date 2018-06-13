@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<div class="backgroundtop"></div>
+<div class="backgroundbottom"></div>
+
+  <head>
+    <meta charset="utf-8">
+    <title>TestTracker</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/dataLoad.js"></script>
+    <script type="text/javascript" src="js/dataPrepend.js"></script>
+    <script type="text/javascript" src="js/existingData.JSON"></script>
+
+  </head>
+  <body>
+
+    <div class="main_wrap">
+
+
+    <div class="header">
+            <b id="taskheader">Task Tracker</b>
+
+            <div class="version">v2.0</div>
+
+      </div>
+
+    <div class="container clear">
+
+
+
+    <div class="lefttable">
+      <br>
+      <br>
+        <!-- <div class="formCenter"> -->
+            <span class="titleC">Create a task</span>
+            <br>
+            <br>
+
+      <form class="formMain" id="task_form" method="post">
+
+
+    <label for="tname">Task Name</label>
+    <input type="text" id="taskname" name="taskName" form="task_form">
+    <br>
+    <br>
+    <label for="date">Date</label>
+
+    <input type="text" id="taskdate" name="taskDate" form="task_form">
+    <br>
+    <br>
+    <label for="assigned">Assigned To</label>
+
+    <input type="text" id="taskassigned" name="taskAssignedTo" form = "task_form">
+    <br>
+    <br>
+
+    <input type="button" value="Submit" id="tasksubmit" onclick="appendTask()" name="submitme" form="task_form">
+    <!-- </div> -->
+    </form>
+    </div>
+
+    <div class="righttable">
+      <br>
+      <br>
+      <span class="titleE">Existing Tasks</span>
+      <br>
+      <br>
+      <div class="scrolltable">
+        <table id="datatable">
+        </table>
+      </div>
+    </div>
+    </div>
+    </div>
+  </body>
+</html>
